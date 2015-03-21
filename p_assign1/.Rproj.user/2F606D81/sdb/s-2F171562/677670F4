@@ -1,0 +1,17 @@
+{
+    "contents" : "complete <- function(directory, id = 1:332) {\n        files <- list.files(directory, full.names = TRUE)\n        dat <- data.frame()\n        for (i in id) {\n                current_file <- read.csv(files[i])\n                row <- sum(complete.cases(current_file))\n                add <-c(i, row)\n                dat <- rbind(dat, add)\n                \n                \n        }\n        colnames(dat) <-c(\"id\", \"nobs\")\n        dat\n        \n}\n",
+    "created" : 1424036782746.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2618601047",
+    "id" : "677670F4",
+    "lastKnownWriteTime" : 1424124095,
+    "path" : "~/Coursera/specdata/complete.R",
+    "project_path" : "complete.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

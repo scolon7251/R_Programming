@@ -1,0 +1,17 @@
+{
+    "contents" : "pollutantmean <- function(directory, pollutant, id = 1:332) {\n        files <- list.files(directory, full.names = TRUE)\n        dat <- data.frame()\n        for (i in 1:332) {\n                dat <- rbind(dat, read.csv(files[i]))                \n        }\n        id_subset <- dat[which(dat[, \"ID\"] %in% id), ]\n        mean(id_subset[, pollutant], na.rm =TRUE)\n                     \n}\n\n       \n\n      \n\n",
+    "created" : 1424036607016.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2499999893",
+    "id" : "A8EB74CC",
+    "lastKnownWriteTime" : 1424036596,
+    "path" : "~/Coursera/specdata/pollutantmean.R",
+    "project_path" : "pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
